@@ -1,0 +1,73 @@
+#%Module1.0
+proc ModulesHelp { } {
+  puts stderr "Intel oneAPI/2021.2 - Adds Intel oneAPI 2021.2 from /opt/intel/oneapi to the environment."
+}
+set name    oneapi
+set version 2021.2
+conflict gcc
+conflict mpich
+conflict boost
+module-whatis                      "Intel oneAPI 2021.2"
+
+
+setenv VT_MPI {impi4};
+setenv INTEL_PYTHONHOME {/opt/soft/oneapi/debugger/10.1.1/dep};
+setenv ONEAPI_ROOT {/opt/soft/oneapi};
+setenv CPLUS_INCLUDE_PATH {/opt/soft/oneapi/clck/2021.2.0/include};
+prepend-path PATH {/opt/soft/oneapi/clck/2021.2.0/bin/intel64};
+prepend-path PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/ioc/bin};
+prepend-path PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/bin};
+prepend-path PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/bin/intel64};
+prepend-path PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/lib/oclfpga/bin};
+prepend-path PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/lib/oclfpga/llvm/aocl-bin};
+prepend-path PATH {/opt/soft/oneapi/debugger/10.1.1/gdb/intel64/bin};
+prepend-path PATH {/opt/soft/oneapi/dev-utilities/2021.2.0/bin};
+prepend-path PATH {/opt/soft/oneapi/inspector/2021.2.0/bin64};
+prepend-path PATH {/opt/soft/oneapi/itac/2021.2.0/bin};
+prepend-path PATH {/opt/soft/oneapi/itac/2021.2.0/bin};
+prepend-path PATH {/opt/soft/oneapi/mpi/2021.2.0//bin};
+prepend-path PATH {/opt/soft/oneapi/mpi/2021.2.0//libfabric/bin};
+setenv CLCK_ROOT {/opt/soft/oneapi/clck/2021.2.0};
+prepend-path MANPATH {/opt/soft/oneapi/clck/2021.2.0/man};
+prepend-path MANPATH {/opt/soft/oneapi/debugger/10.1.1/documentation/man};
+prepend-path MANPATH {/opt/soft/oneapi/itac/2021.2.0/man};
+prepend-path MANPATH {/opt/soft/oneapi/mpi/2021.2.0/man};
+append-path MANPATH {/opt/soft/oneapi/compiler/2021.2.0/documentation/en/man/common};
+append-path MANPATH {};
+append-path MANPATH {};
+append-path MANPATH {};
+setenv LIBRARY_PATH {/opt/soft/oneapi/tbb/latest/env/../lib/intel64/gcc4.8:/opt/soft/oneapi/mpi/2021.2.0//libfabric/lib:/opt/soft/oneapi/mpi/2021.2.0//lib/release:/opt/soft/oneapi/mpi/2021.2.0//lib:/opt/soft/oneapi/compiler/2021.2.0/linux/compiler/lib/intel64_lin:/opt/soft/oneapi/compiler/2021.2.0/linux/lib:/opt/soft/oneapi/clck/2021.2.0/lib/intel64};
+setenv ACL_BOARD_VENDOR_PATH {/opt/Intel/OpenCLFPGA/oneAPI/Boards};
+setenv CMAKE_PREFIX_PATH {/opt/soft/oneapi/tbb/latest/env/..:};
+prepend-path CLASSPATH {/opt/soft/oneapi/mpi/2021.2.0//lib/mpi.jar};
+setenv VT_ROOT {/opt/soft/oneapi/itac/2021.2.0};
+setenv I_MPI_ROOT {/opt/soft/oneapi/mpi/2021.2.0};
+setenv INTEL_LICENSE_FILE {/opt/intel/licenses:/home/yuang/intel/licenses:/opt/soft/oneapi/clck/2021.2.0/licensing:/opt/intel/licenses:/home/yuang/intel/licenses:/Users/Shared/Library/Application Support/Intel/Licenses};
+setenv CPATH {/opt/soft/oneapi/tbb/latest/env/../include:/opt/soft/oneapi/mpi/2021.2.0//include:/opt/soft/oneapi/dev-utilities/2021.2.0/include:/opt/soft/oneapi/compiler/2021.2.0/linux/include};
+setenv VT_LIB_DIR {/opt/soft/oneapi/itac/2021.2.0/lib};
+setenv VT_ADD_LIBS {-ldwarf -lelf -lvtunwind -lm -lpthread};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/compiler/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/compiler/lib/intel64_lin};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/lib/oclfpga/linux64/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/lib/oclfpga/host/linux64/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/lib/emu};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/lib/x64};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/compiler/2021.2.0/linux/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/debugger/10.1.1/gdb/intel64/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/debugger/10.1.1/libipt/intel64/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/debugger/10.1.1/dep/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/itac/2021.2.0/slib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/mpi/2021.2.0//lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/mpi/2021.2.0//lib/release};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/mpi/2021.2.0//libfabric/lib};
+prepend-path LD_LIBRARY_PATH {/opt/soft/oneapi/tbb/latest/env/../lib/intel64/gcc4.8};
+setenv FI_PROVIDER_PATH {/opt/soft/oneapi/mpi/2021.2.0//libfabric/lib/prov:/usr/lib64/libfabric};
+prepend-path PKG_CONFIG_PATH {/opt/soft/oneapi/inspector/2021.2.0/include/pkgconfig/lib64};
+setenv INTELFPGAOCLSDKROOT {/opt/soft/oneapi/compiler/2021.2.0/linux/lib/oclfpga};
+setenv TBBROOT {/opt/soft/oneapi/tbb/latest/env/..};
+setenv SETVARS_VARS_PATH {/opt/soft/oneapi/tbb/latest/env/vars.sh};
+setenv SETVARS_COMPLETED {1};
+setenv VT_SLIB_DIR {/opt/soft/oneapi/itac/2021.2.0/slib};
+setenv INFOPATH {/opt/soft/oneapi/debugger/10.1.1/documentation/info/};
+setenv OCL_ICD_FILENAMES {libintelocl_emu.so:libalteracl.so:/opt/soft/oneapi/compiler/2021.2.0/linux/lib/x64/libintelocl.so};
+setenv INSPECTOR_2021_DIR {/opt/soft/oneapi/inspector/2021.2.0};

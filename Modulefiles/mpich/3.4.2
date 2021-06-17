@@ -1,0 +1,19 @@
+#%Module1.0
+proc ModulesHelp { } {
+  puts stderr "MPICH/3.4.2 - Adds MPICH 3.4.2 from /home/yuang/Programs/mpich-3.4.2 to the environment."
+}
+set name  mpich
+set version 3.4.2
+conflict	oneapi
+module-whatis                      "MPICH 3.4.2"
+set             MPICH_PATH         /home/yuang/Programs/mpich-3.4.2
+prepend-path 	  PATH 		           $MPICH_PATH/bin
+prepend-path    INCLUDE_PATH       $MPICH_PATH/include
+prepend-path 	  LD_LIBRARY_PATH    $MPICH_PATH/lib
+
+setenv 			MPI_BIN		    $MPICH_PATH/bin
+setenv			MPI_INCLUDE	    $MPICH_PATH/include
+setenv	 		MPI_LIB		    $MPICH_PATH/lib
+setenv			MPI_COMPILER	MPICH-x86_64
+setenv			MPI_SUFFIX	    _MPICH
+setenv	 		MPI_HOME	    /home/yuang/Programs/mpich-3.4.2

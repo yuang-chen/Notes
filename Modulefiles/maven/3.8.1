@@ -1,0 +1,13 @@
+#%Module1.0
+proc ModulesHelp { } {
+  puts stderr "Maven/3.8.1 - Adds Maven 3.8.1 from /home/yuang/Programs/maven-3.8.1 to the environment."
+}
+set name        maven
+set version     3.8.1
+conflict	    maven
+module-whatis                   "Maven 3.8.1"
+
+set             MAVEN_PATH       /home/yuang/Programs/maven-3.8.1
+prepend-path 	PATH 		     $MAVEN_PATH/bin
+
+setenv	 		MAVEN_HOME	     /home/yuang/Programs/maven-3.8.1

@@ -1,0 +1,13 @@
+#%Module1.0
+proc ModulesHelp { } {
+  puts stderr "Hadoop/2.0.3 - Adds Hadoop 2.0.3-alpha from /opt/soft/hadoop-2.0.3-alpha to the environment."
+}
+set name    hadoop
+set version 2.0.3-alpha
+conflict	hadoop
+module-whatis                "Hadoop 2.0.3-alpha"
+set           HADOOP_PATH    /opt/soft/hadoop-2.0.3-alpha
+prepend-path 	PATH 		       $HADOOP_PATH/bin
+prepend-path 	PATH 		       $HADOOP_PATH/sbin
+
+setenv	 		HADOOP_HOME	      /opt/soft/hadoop-2.0.3-alpha

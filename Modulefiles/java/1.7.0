@@ -1,0 +1,13 @@
+#%Module1.0
+proc ModulesHelp { } {
+  puts stderr "Java/1.7.0 - Adds Java 1.7.0 from /usr/lib/jvm/java-1.7.0 to the environment."
+}
+set name        java
+set version     1.7.0
+conflict	    java
+module-whatis                   "Java 1.7.0"
+
+set             JAVA_PATH       /home/yuang/Programs/Java-1.7.0
+prepend-path 	PATH 		     $JAVA_PATH/bin
+
+setenv	 		JAVA_HOME	     /usr/lib/jvm/java-1.7.0

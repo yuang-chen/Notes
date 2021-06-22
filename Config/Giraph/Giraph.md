@@ -24,3 +24,6 @@ files to modify in $HADOOP/etc/hadoop/:
 ## 2. Giraph 
 
 install Giraph on the master node is sufficient - [reference](https://blog.csdn.net/HNUPCJ/article/details/105812167)
+
+files to modify in $Giraph:
+1. pom.xml: <dep.guava.version>21.0</dep.guava.version>  ->   <dep.guava.version>20.0</dep.guava.version>

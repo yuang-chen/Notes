@@ -1,0 +1,12 @@
+#%Module1.0
+proc ModulesHelp { } {
+  puts stderr "Spack/0.16.2 - Adds Spack 0.16.2 from /home/yuang/Programs/spack to the environment."
+}
+set name        spack
+set version     0.16.2
+conflict	    spack
+module-whatis                   "Spack 0.16.2"
+
+set             SPACK_HOME     /home/yuang/Programs/spack
+prepend-path 	PATH 		   $SPACK_HOME/bin
+

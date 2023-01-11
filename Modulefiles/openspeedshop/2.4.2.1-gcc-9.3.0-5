@@ -1,0 +1,41 @@
+#%Module1.0
+## Module file created by spack (https://github.com/spack/spack) on 2021-06-21 23:19:48.597566
+##
+## openspeedshop@2.4.2.1%gcc@9.3.0~crayfe~cti~cuda~ipo~mpich~mpich2~mpt~mvapich~mvapich2~openmpi~runtime build_type=RelWithDebInfo gui=none arch=linux-ubuntu20.04-cascadelake/5mybz6w
+##
+## Configure options: -DBINUTILS_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/binutils-2.32-ocpk7xq7n7ov7mpbfkz3dsr3nsfnmpsn -DLIBELF_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/elfutils-0.185-sq267mzilskbvzx7v57emkzildiotgkf -DLIBDWARF_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/libdwarf-20180129-gb5ietxzsrpupr7r4agwufypll5nf2uz -DPYTHON_EXECUTABLE=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/python-2.7.18-l4lb6pjgj4qibz2xcijfn45w3zk2c5hi/bin/python2.7 -DPYTHON_INCLUDE_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/python-2.7.18-l4lb6pjgj4qibz2xcijfn45w3zk2c5hi/include/python2.7 -DPYTHON_LIBRARY=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/python-2.7.18-l4lb6pjgj4qibz2xcijfn45w3zk2c5hi/lib/libpython2.7.so -DBoost_NO_SYSTEM_PATHS=TRUE -DBoost_NO_BOOST_CMAKE=TRUE -DBOOST_ROOT=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/boost-1.76.0-66kmjl2lzzzfxhhr2ie2u4zh2h2hsxuk -DBoost_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/boost-1.76.0-66kmjl2lzzzfxhhr2ie2u4zh2h2hsxuk -DBOOST_LIBRARYDIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/boost-1.76.0-66kmjl2lzzzfxhhr2ie2u4zh2h2hsxuk/lib -DDYNINST_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/dyninst-10.1.0-nqfdwb5zocbtkxmzum2m3d5d53vhjra7 -DCMAKE_CXX_FLAGS=-O2 -g -Wall -DCMAKE_C_FLAGS=-O2 -g -Wall -DINSTRUMENTOR=cbtf -DSQLITE3_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/sqlite-3.35.5-wuyuxiconi6gedadjsakwdts3vevi5y6 -DCBTF_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/cbtf-1.9.4.1-bneufzvrwzx4esvgkenxub6gz5uq6b4o -DCBTF_KRELL_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/cbtf-krell-1.9.4.1-44pkstpdr37fbkdlszpbj7y6zdvjm6tt -DMRNET_DIR=/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/mrnet-5.0.1-3-d22fnsh3j7n2pg6rktwbfcuo32iro35n -DBUILD_QT3_GUI=FALSE
+##
+
+
+module-whatis "OpenSpeedShop is a community effort led by Trenza, Inc. It builds on top of a broad list of community infrastructures, most notably Dyninst and MRNet from UW, libmonitor from Rice, and PAPI from UTK. OpenSpeedShop is an open source multi platform Linux performance tool which is targeted to support performance analysis of applications running on both single node and large scale IA64, IA32, EM64T, AMD64, PPC, ARM, Power8, Intel Phi, Blue Gene and Cray platforms. OpenSpeedShop development is hosted by Trenza Inc.. The infrastructure and base components of OpenSpeedShop are released as open source code primarily under LGPL. "
+
+proc ModulesHelp { } {
+puts stderr "OpenSpeedShop is a community effort led by Trenza, Inc. It builds on top"
+puts stderr "of a broad list of community infrastructures, most notably Dyninst and"
+puts stderr "MRNet from UW, libmonitor from Rice, and PAPI from UTK. OpenSpeedShop is"
+puts stderr "an open source multi platform Linux performance tool which is targeted"
+puts stderr "to support performance analysis of applications running on both single"
+puts stderr "node and large scale IA64, IA32, EM64T, AMD64, PPC, ARM, Power8, Intel"
+puts stderr "Phi, Blue Gene and Cray platforms. OpenSpeedShop development is hosted"
+puts stderr "by Trenza Inc.. The infrastructure and base components of OpenSpeedShop"
+puts stderr "are released as open source code primarily under LGPL."
+}
+
+
+prepend-path LD_LIBRARY_PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/openspeedshop-2.4.2.1-5mybz6wil5w3vscrpfcnr67n7wdh4ryz/lib64"
+prepend-path PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/openspeedshop-2.4.2.1-5mybz6wil5w3vscrpfcnr67n7wdh4ryz/bin"
+prepend-path MANPATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/openspeedshop-2.4.2.1-5mybz6wil5w3vscrpfcnr67n7wdh4ryz/share/man"
+prepend-path CMAKE_PREFIX_PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/openspeedshop-2.4.2.1-5mybz6wil5w3vscrpfcnr67n7wdh4ryz/"
+prepend-path PYTHONPATH ""
+setenv DYNINSTAPI_RT_LIB "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/dyninst-10.1.0-nqfdwb5zocbtkxmzum2m3d5d53vhjra7/lib/libdyninstAPI_RT.so"
+setenv OPENSS_RAWDATA_DIR "."
+setenv OPENSS_PLUGIN_PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/openspeedshop-2.4.2.1-5mybz6wil5w3vscrpfcnr67n7wdh4ryz/lib64/openspeedshop"
+setenv XPLAT_RSH "ssh"
+setenv MRNET_COMM_PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/cbtf-krell-1.9.4.1-44pkstpdr37fbkdlszpbj7y6zdvjm6tt/sbin/cbtf_mrnet_commnode"
+setenv CBTF_MRNET_BACKEND_PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/cbtf-krell-1.9.4.1-44pkstpdr37fbkdlszpbj7y6zdvjm6tt/sbin/cbtf_libcbtf_mrnet_backend"
+prepend-path PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/mrnet-5.0.1-3-d22fnsh3j7n2pg6rktwbfcuo32iro35n/bin"
+prepend-path PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/cbtf-krell-1.9.4.1-44pkstpdr37fbkdlszpbj7y6zdvjm6tt/bin"
+prepend-path PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/cbtf-krell-1.9.4.1-44pkstpdr37fbkdlszpbj7y6zdvjm6tt/sbin"
+prepend-path MANPATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/cbtf-krell-1.9.4.1-44pkstpdr37fbkdlszpbj7y6zdvjm6tt/share/man"
+prepend-path PATH "/home/yuang/Programs/spack/opt/spack/linux-ubuntu20.04-cascadelake/gcc-9.3.0/python-2.7.18-l4lb6pjgj4qibz2xcijfn45w3zk2c5hi/bin"
+
